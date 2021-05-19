@@ -52,3 +52,4 @@ sysinfo.txt
 UserSettings/EditorUserSettings.asset
 # ProjectSettings/PackageManagerSettings.asset
 .idea/
+Logs/ApiUpdaterCheck.txt

@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 76815453}
   - component: {fileID: 76815454}
   m_Layer: 5
-  m_Name: UpperText
+  m_Name: LetterTexts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,11 +215,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9fba841b0395c4fb825a2ea98fc6be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upperText:
+  letterTexts:
   - {fileID: 954070841}
   - {fileID: 1577546089}
   - {fileID: 540458689}
-  lowerText:
+  alphabetTexts:
   - {fileID: 1140866767}
   - {fileID: 411849400}
   - {fileID: 116444326}
@@ -1312,7 +1312,7 @@ GameObject:
   - component: {fileID: 2029689737}
   - component: {fileID: 2029689738}
   m_Layer: 5
-  m_Name: LowerText
+  m_Name: AlphabetTexts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
