@@ -7,7 +7,35 @@ public class AbcMatchingController : MonoBehaviour
 {
     [SerializeField]List<TMP_Text> upperText;
     List<string> letterList = new List<string>();
-
+    List<string> wordList = new List<string>(new string[] 
+    { 
+        "Apple", "Ant", "Axe",
+        "Ball", "Boy", "Book",
+        "Cat", "Clock", "Cake",
+        "Dog", "Doll", "Door",
+        "Elephant", "Eggs", "Ear",
+        "Fox", "Fan", "Fish",
+        "Grapes", "Goat", "Girl",
+        "Hen", "Horse", "Hat",
+        "Icecream", "Ink", "Island",
+        "Joker", "Jug", "Jacket",
+        "Kite", "Key", "King",
+        "Lion", "Lotus", "Leg",
+        "Mango", "Milk", "Monkey",
+        "Nest", "Net", "Nose",
+        "Orange", "Owl", "Onion",
+        "Pen", "Parrot", "Panda",
+        "Queen", "Question", "Quiet",
+        "Rose", "Rabbit", "Ring",
+        "Sky", "Sun", "Spoon",
+        "Toys", "Table", "Tiger",
+        "Umbrella", "Uniform", "Umpire",
+        "Van", "Vegetable", "Volcano",
+        "Watermelon", "Water", "Whale",
+        "X-Mas Tree", "Xylophone", "X-Ray",
+        "Yellow", "Yak", "Yoga",
+        "Zebra", "Zero", "Zoo"
+    });
     private void Start() {
         UpperTextDisplay();
     }
@@ -30,11 +58,10 @@ public class AbcMatchingController : MonoBehaviour
     }
 
     private void Update() {
-        if(Input.GetKeyDown(KeyCode.P)) {
-            foreach (string s  in letterList)
+        if(Input.GetKeyDown(KeyCode.P)) 
             {
-                Debug.Log(s);
+                Debug.Log((char) ('a' + 1));
             }
-        }
+        
     }
 }
