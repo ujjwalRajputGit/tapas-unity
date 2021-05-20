@@ -51,3 +51,5 @@ sysinfo.txt
 # ProjectSettings/VFXManager.asset
 UserSettings/EditorUserSettings.asset
 # ProjectSettings/PackageManagerSettings.asset
+.idea/
+Logs/ApiUpdaterCheck.txt
