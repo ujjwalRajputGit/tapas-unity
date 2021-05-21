@@ -7,12 +7,12 @@ using UnityEngine.UI;
 
 public class AbcMatchingController : MonoBehaviour
 {
-  [SerializeField]List<TMP_Text> letterTexts;
   [SerializeField]List<TMP_Text> alphabetTexts;
+  [SerializeField]List<TMP_Text> wordTexts;
   [SerializeField]List<Image> wordImages;
   [SerializeField] SpriteAtlas wordImagesAtlas;
-  List<string> letterList = new List<string>();
   List<string> alphabetList = new List<string>();
+  List<string> wordList = new List<string>();
   List<string> wordCollectinList = new List<string>(new string[] { 
     "Apple", "Ant", "Axe",
     "Ball", "Boy", "Book",
@@ -43,41 +43,43 @@ public class AbcMatchingController : MonoBehaviour
   });
   
   private void Start() {
-    DisplayLettes();
     DisplayAlphabets();
-    DisplayImages();
+    DisplayWords();
   }
-  void DisplayLettes() { 
-    letterList.Clear(); 
-    while (letterList.Count < letterTexts.Count) {
-      string letter = RandomLetterGenerator();
-      if(!letterList.Contains(letter)) {
-        letterTexts[letterList.Count].text = letter;
-        letterList.Add(letter);
+  void DisplayAlphabets() { 
+    alphabetList.Clear(); 
+    while (alphabetList.Count < alphabetTexts.Count) {
+      string letter = RandomAlphabetGenerator();
+      if(!alphabetList.Contains(letter)) {
+        alphabetTexts[alphabetList.Count].text = letter;
+        alphabetList.Add(letter);
       }            
     }
   }
 
-  void DisplayAlphabets() {
-    LettersMatchingAlphabetGenerator();
-    foreach (TMP_Text t in alphabetTexts) {
-      int random = Random.Range(0, alphabetList.Count);
-      t.text = alphabetList[random];
-      alphabetList.RemoveAt(random);
+  void DisplayWords() {
+    AlphabetMatchingWordGenerator();
+    foreach (TMP_Text t in wordTexts) {
+      int random = Random.Range(0, wordList.Count);
+      string wordName = wordList[random];
+      t.text = wordName;
+      DisplayImages(wordName,(3 - wordList.Count));
+      wordList.RemoveAt(random);
     }
   }
 
-  void DisplayImages() {
-
+  void DisplayImages(string imageName, int index) {
+    wordImages[index].sprite = wordImagesAtlas.GetSprite(imageName);
+    wordImages[index].SetNativeSize();
   }
 
-  void LettersMatchingAlphabetGenerator() {
-    alphabetList.Clear();
-    foreach (string s in letterList) {
+  void AlphabetMatchingWordGenerator() {
+    wordList.Clear();
+    foreach (string s in alphabetList) {
       int r1 = (StringToInt(s,0) - 65) * 3 ;
       int r2 = (3 + r1);
       int random = Random.Range(r1, r2);
-      alphabetList.Add(wordCollectinList[random]);
+      wordList.Add(wordCollectinList[random]);
     }
   }
   // GetComponent<TMP_Text>().text = randomLetter.ToString().ToUpper();
@@ -87,7 +89,7 @@ public class AbcMatchingController : MonoBehaviour
     return i;
   }
     
-  string RandomLetterGenerator() {
+  string RandomAlphabetGenerator() {
     int randomNum = Random.Range(0,26);
     char randomLetter = (char) ('A' + randomNum);
     return randomLetter.ToString();
