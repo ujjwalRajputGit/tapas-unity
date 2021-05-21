@@ -2,19 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.U2D;
+using UnityEngine.UI;
 
 public class AbcMatchingController : MonoBehaviour
 {
   [SerializeField]List<TMP_Text> letterTexts;
   [SerializeField]List<TMP_Text> alphabetTexts;
+  [SerializeField]List<Image> wordImages;
+  [SerializeField] SpriteAtlas wordImagesAtlas;
   List<string> letterList = new List<string>();
   List<string> alphabetList = new List<string>();
   List<string> wordCollectinList = new List<string>(new string[] { 
     "Apple", "Ant", "Axe",
     "Ball", "Boy", "Book",
-    "Cat", "Clock", "Cake",
+    "Cat", "Clock", "Car",
     "Dog", "Doll", "Door",
-    "Elephant", "Eggs", "Ear",
+    "Elephant", "Egg", "Eye",
     "Fox", "Fan", "Fish",
     "Grapes", "Goat", "Girl",
     "Hen", "Horse", "Hat",
@@ -28,10 +32,10 @@ public class AbcMatchingController : MonoBehaviour
     "Pen", "Parrot", "Panda",
     "Queen", "Question", "Quiet",
     "Rose", "Rabbit", "Ring",
-    "Sky", "Sun", "Spoon",
+    "Snake", "Sun", "Spoon",
     "Toys", "Table", "Tiger",
     "Umbrella", "Uniform", "Umpire",
-    "Van", "Vegetable", "Volcano",
+    "Van", "Vegetables", "Volcano",
     "Watermelon", "Water", "Whale",
     "X-Mas Tree", "Xylophone", "X-Ray",
     "Yellow", "Yak", "Yoga",
@@ -41,6 +45,7 @@ public class AbcMatchingController : MonoBehaviour
   private void Start() {
     DisplayLettes();
     DisplayAlphabets();
+    DisplayImages();
   }
   void DisplayLettes() { 
     letterList.Clear(); 
@@ -60,6 +65,10 @@ public class AbcMatchingController : MonoBehaviour
       t.text = alphabetList[random];
       alphabetList.RemoveAt(random);
     }
+  }
+
+  void DisplayImages() {
+
   }
 
   void LettersMatchingAlphabetGenerator() {
