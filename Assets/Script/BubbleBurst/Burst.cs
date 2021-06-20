@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace BubbleBurst
+namespace Tapas.BubbleBurst
 {
 	public class Burst : MonoBehaviour, IPointerClickHandler
 	{

@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace PickTheSmallLetter
+namespace Tapas.PickTheSmallLetter
 {
 	public class DisplayLetter : MonoBehaviour
 	{

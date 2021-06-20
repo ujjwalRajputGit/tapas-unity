@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace PickTheSmallLetter
+namespace Tapas.PickTheSmallLetter
 {
 	public class PickTheSmallLetter : MonoBehaviour, IPointerClickHandler, IPointerUpHandler
 	{

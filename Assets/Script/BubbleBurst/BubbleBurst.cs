@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-namespace BubbleBurst
+namespace Tapas.BubbleBurst
 {
 	public class BubbleBurst : MonoBehaviour
 	{
