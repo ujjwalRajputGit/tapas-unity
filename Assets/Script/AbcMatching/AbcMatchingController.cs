@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.U2D;
 using UnityEngine.UI;
 
-namespace Script
+namespace AbcMatching
 {
 	public class AbcMatchingController : MonoBehaviour
 	{
@@ -16,7 +16,7 @@ namespace Script
 		Vector2 lastFingerPosition;
 		GameObject currentLine;
 		LineRenderer lineRenderer;
-		private Camera mainCamera;
+		Camera mainCamera;
 		List<string> alphabetList = new List<string>();
 		List<string> wordList = new List<string>();
 		List<string> wordCollectionList = new List<string>(new[] {

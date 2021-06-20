@@ -1,77 +1,68 @@
-using System.Linq;
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+namespace PickTheSmallLetter
 {
-    public static char _letter = 'a';
-    static int _correctAnswers = 5;
-    static int _correctclicks;
+	public class GameController : MonoBehaviour
+	{
+		public static char letter = 'a';
+		static int correctAnswers = 5;
+		static int correctClicks;
 
-    private void OnEnable() 
-    {
-        GenerateBoard();
-        UpdateDisplayLetters();
-    }
+		void OnEnable() {
+			GenerateBoard();
+			UpdateDisplayLetters();
+		}
 
-    private static void GenerateBoard()
-    {
-        var clickables = FindObjectsOfType<PickTheSmallLetter>();
-        int count = clickables.Length;
+		static void GenerateBoard() {
+			var clickable = FindObjectsOfType<PickTheSmallLetter>();
+			int count = clickable.Length;
+			List<char> letterList = new List<char>();
 
-        List<char> letterList = new List<char>();
+			for (int i = 0; i < correctAnswers; i++)
+				letterList.Add(letter);
 
-        for (int i = 0; i < _correctAnswers; i++)
-          letterList.Add(_letter);
-        
-        for (int i = _correctAnswers; i < count; i++)
-        {    
-            var chosenLetter = ChooseInvalidRandomLetter();
-            letterList.Add(chosenLetter);
-        }
-          letterList = letterList.OrderBy(t => UnityEngine.Random.Range(0, 10000)).ToList();
+			for (int i = correctAnswers; i < count; i++) {
+				var chosenLetter = ChooseInvalidRandomLetter();
+				letterList.Add(chosenLetter);
+			}
+			
+			letterList = letterList.OrderBy(t => Random.Range(0, 10000)).ToList();
 
-        for (int i = 0; i < count; i++)
-        {
-            clickables[i].SetLetter(letterList[i]);
-        }
+			for (int i = 0; i < count; i++) {
+				clickable[i].SetLetter(letterList[i]);
+			}
 
-        FindObjectOfType<RemainingLetterCount>().SetRemaining(_correctAnswers - _correctclicks);
+			FindObjectOfType<RemainingLetterCount>().SetRemaining(correctAnswers - correctClicks);
+		}
 
-    }
+		internal static void HandleCorrectLetterClick() {
+			correctClicks++;
+			FindObjectOfType<RemainingLetterCount>().SetRemaining(correctAnswers - correctClicks);
+			if (correctClicks >= correctAnswers) {
+				letter++;
+				UpdateDisplayLetters();
+				correctClicks = 0;
+				GenerateBoard();
+			}
+		}
 
-    internal static void HandleCorrectLetterClick()
-    {
-        _correctclicks++;
-        FindObjectOfType<RemainingLetterCount>().SetRemaining(_correctAnswers - _correctclicks);
-        if (_correctclicks >= _correctAnswers)
-        {
-            _letter++;
-            UpdateDisplayLetters();
-            _correctclicks = 0;
-            GenerateBoard();
-        }
-    }
+		static void UpdateDisplayLetters() {
+			foreach (var displayLetter in FindObjectsOfType<DisplayLetter>()) {
+				displayLetter.SetLetter(letter);
+			}
+		}
 
-    private static void UpdateDisplayLetters()
-    {
-        foreach (var displayletter in FindObjectsOfType<DisplayLetter>())
-        {
-            displayletter.SetLetter(_letter);
-        }
-    }
+		static char ChooseInvalidRandomLetter() {
+			int a = Random.Range(0, 26);
+			var randomLetter = (char) ('a' + a);
+			while (randomLetter == letter) {
+				a = Random.Range(0, 26);
+				randomLetter = (char) ('a' + a);
+			}
 
-    private static char ChooseInvalidRandomLetter()
-    {
-        int a = UnityEngine.Random.Range(0,26);
-              var randomLetter = (char) ('a' + a);
-              while (randomLetter == _letter)
-              {
-                  a = UnityEngine.Random.Range(0,26);
-                   randomLetter = (char) ('a' + a);
-              }
-              
-            return randomLetter;
-    }
+			return randomLetter;
+		}
+	}
 }
