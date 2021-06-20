@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Tapas.AbcMatching
 {
-	public class AbcMatchingController : MonoBehaviour
+	public class GameController : MonoBehaviour
 	{
 		[SerializeField] List<TMP_Text> alphabetTexts;
 		[SerializeField] List<TMP_Text> wordTexts;

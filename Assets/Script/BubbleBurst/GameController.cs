@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Tapas.BubbleBurst
 {
-	public class BubbleBurst : MonoBehaviour
+	public class GameController : MonoBehaviour
 	{
 		[SerializeField] List<TMP_Text> bubbleTexts;
 		List<string> wordList = new List<string>();

@@ -33,7 +33,7 @@ namespace Tapas.PickTheSmallLetter
 //        GetComponent<TMP_Text>().text = _randomLetter.ToString();
 //    }
 
-		internal void SetLetter(char letter) {
+		public void SetLetter(char letter) {
 			enabled = true;
 			GetComponent<TMP_Text>().color = Color.white;
 			randomLetter = letter;

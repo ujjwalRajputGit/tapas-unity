@@ -37,7 +37,7 @@ namespace Tapas.PickTheSmallLetter
 			FindObjectOfType<RemainingLetterCount>().SetRemaining(correctAnswers - correctClicks);
 		}
 
-		internal static void HandleCorrectLetterClick() {
+		public static void HandleCorrectLetterClick() {
 			correctClicks++;
 			FindObjectOfType<RemainingLetterCount>().SetRemaining(correctAnswers - correctClicks);
 			if (correctClicks >= correctAnswers) {
