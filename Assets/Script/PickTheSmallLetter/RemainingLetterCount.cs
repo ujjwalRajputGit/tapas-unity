@@ -1,13 +1,12 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class RemainingLetterCount : MonoBehaviour
+namespace Tapas.PickTheSmallLetter
 {
-    internal void SetRemaining(int remaining)
-    {
-        GetComponent<TMP_Text>().text = "x" + remaining;
-    }
+	public class RemainingLetterCount : MonoBehaviour
+	{
+		public void SetRemaining(int remaining) {
+			GetComponent<TMP_Text>().text = "x" + remaining;
+		}
+	}
 }

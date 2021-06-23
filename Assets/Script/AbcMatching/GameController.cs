@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.U2D;
 using UnityEngine.UI;
 
-namespace Script
+namespace Tapas.AbcMatching
 {
-	public class AbcMatchingController : MonoBehaviour
+	public class GameController : MonoBehaviour
 	{
 		[SerializeField] List<TMP_Text> alphabetTexts;
 		[SerializeField] List<TMP_Text> wordTexts;
@@ -16,7 +16,7 @@ namespace Script
 		Vector2 lastFingerPosition;
 		GameObject currentLine;
 		LineRenderer lineRenderer;
-		private Camera mainCamera;
+		Camera mainCamera;
 		List<string> alphabetList = new List<string>();
 		List<string> wordList = new List<string>();
 		List<string> wordCollectionList = new List<string>(new[] {

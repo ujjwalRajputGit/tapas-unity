@@ -174,7 +174,6 @@ GameObject:
   - component: {fileID: 221559612}
   - component: {fileID: 221559614}
   - component: {fileID: 221559613}
-  - component: {fileID: 221559615}
   m_Layer: 5
   m_Name: 'SecondBubble '
   m_TagString: Untagged
@@ -239,18 +238,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221559611}
   m_CullTransparentMesh: 1
---- !u!114 &221559615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 221559611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5f0632a63d7c6c409f1cb396c3bb8dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &309857199
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +393,7 @@ GameObject:
   - component: {fileID: 638306172}
   - component: {fileID: 638306174}
   m_Layer: 5
-  m_Name: MainText
+  m_Name: AlphabetText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -540,7 +527,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3685d67e599b14348bbc47d4c96b0cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordList: []
   bubbleTexts: []
 --- !u!1 &845269130
 GameObject:
@@ -687,7 +673,6 @@ GameObject:
   - component: {fileID: 967004010}
   - component: {fileID: 967004012}
   - component: {fileID: 967004011}
-  - component: {fileID: 967004013}
   m_Layer: 5
   m_Name: FifthBubble
   m_TagString: Untagged
@@ -752,18 +737,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967004009}
   m_CullTransparentMesh: 1
---- !u!114 &967004013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967004009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5f0632a63d7c6c409f1cb396c3bb8dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1175516895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,7 +1299,6 @@ GameObject:
   - component: {fileID: 1805419437}
   - component: {fileID: 1805419439}
   - component: {fileID: 1805419438}
-  - component: {fileID: 1805419440}
   m_Layer: 5
   m_Name: FourthBubble
   m_TagString: Untagged
@@ -1391,18 +1363,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805419436}
   m_CullTransparentMesh: 1
---- !u!114 &1805419440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805419436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5f0632a63d7c6c409f1cb396c3bb8dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1837211194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,7 +1508,6 @@ GameObject:
   - component: {fileID: 1889428901}
   - component: {fileID: 1889428903}
   - component: {fileID: 1889428902}
-  - component: {fileID: 1889428904}
   m_Layer: 5
   m_Name: FirstBubble
   m_TagString: Untagged
@@ -1613,18 +1572,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889428900}
   m_CullTransparentMesh: 1
---- !u!114 &1889428904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1889428900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5f0632a63d7c6c409f1cb396c3bb8dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1960160614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,7 +1583,6 @@ GameObject:
   - component: {fileID: 1960160615}
   - component: {fileID: 1960160617}
   - component: {fileID: 1960160616}
-  - component: {fileID: 1960160618}
   m_Layer: 5
   m_Name: 'ThirdBubble '
   m_TagString: Untagged
@@ -1701,18 +1647,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960160614}
   m_CullTransparentMesh: 1
---- !u!114 &1960160618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960160614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5f0632a63d7c6c409f1cb396c3bb8dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2104720240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,7 +1676,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3685d67e599b14348bbc47d4c96b0cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordList: []
   bubbleTexts:
   - {fileID: 845269132}
   - {fileID: 1525232811}

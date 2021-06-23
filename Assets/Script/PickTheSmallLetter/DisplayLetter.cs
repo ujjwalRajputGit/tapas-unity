@@ -1,13 +1,12 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class DisplayLetter : MonoBehaviour
+namespace Tapas.PickTheSmallLetter
 {
-    internal void SetLetter(char letter)
-    {
-        GetComponent<TMP_Text>().text = letter.ToString().ToUpper();
-    }
+	public class DisplayLetter : MonoBehaviour
+	{
+		public void SetLetter(char letter) {
+			GetComponent<TMP_Text>().text = letter.ToString().ToUpper();
+		}
+	}
 }
