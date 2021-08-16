@@ -13,9 +13,10 @@ namespace Tapas.AbcMatching
 		[SerializeField] List<Image> wordImages;
 		[SerializeField] SpriteAtlas wordImagesAtlas;
 		[SerializeField] GameObject linePrefab;
-		Vector2 lastFingerPosition;
+		List<Vector2> fingerPositions = new List<Vector2>();
 		GameObject currentLine;
 		LineRenderer lineRenderer;
+		EdgeCollider2D edgeCollider2D;
 		Camera mainCamera;
 		List<string> alphabetList = new List<string>();
 		List<string> wordList = new List<string>();
@@ -106,17 +107,23 @@ namespace Tapas.AbcMatching
 			return randomLetter.ToString();
 		}
 
-		void CreateLine(Vector2 initialFingerPos) {
+		void CreateLine(Vector2 firstFingerPos) {
 			currentLine = Instantiate(linePrefab, Vector3.zero, linePrefab.transform.rotation);
 			lineRenderer = currentLine.GetComponent<LineRenderer>();
-			lineRenderer.SetPosition(0, mainCamera.ScreenToWorldPoint(initialFingerPos));
-			lineRenderer.SetPosition(1, mainCamera.ScreenToWorldPoint(initialFingerPos));
+			edgeCollider2D = currentLine.GetComponent<EdgeCollider2D>();
+			fingerPositions.Clear();
+			fingerPositions.Add(mainCamera.ScreenToWorldPoint(firstFingerPos));
+			fingerPositions.Add(mainCamera.ScreenToWorldPoint(firstFingerPos));
+			lineRenderer.SetPosition(0, fingerPositions[0]);
+			lineRenderer.SetPosition(1, fingerPositions[1]);
+			edgeCollider2D.points = fingerPositions.ToArray();
 		}
 
 		void UpdateLine(Vector2 newFingerPos) {
-			lastFingerPosition = newFingerPos;
+			fingerPositions.Add(newFingerPos);
 			lineRenderer.positionCount++;
 			lineRenderer.SetPosition(lineRenderer.positionCount - 1, newFingerPos);
+			edgeCollider2D.points = fingerPositions.ToArray();
 		}
 
 		void DrawLine() {
@@ -125,7 +132,7 @@ namespace Tapas.AbcMatching
 			}
 			if (Input.GetMouseButton(0)) {
 				Vector2 tempFingerPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-				if (Vector2.Distance(tempFingerPos, lastFingerPosition) > 0.1f) {
+				if (Vector2.Distance(tempFingerPos, fingerPositions[fingerPositions.Count - 1]) > 0.1f) {
 					UpdateLine(tempFingerPos);
 				}
 			}
