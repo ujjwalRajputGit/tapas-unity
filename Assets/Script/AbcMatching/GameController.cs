@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.U2D;
 using UnityEngine.UI;
+using Tapas.Common;
 
 namespace Tapas.AbcMatching
 {
@@ -20,34 +21,6 @@ namespace Tapas.AbcMatching
 		Camera mainCamera;
 		List<string> alphabetList = new List<string>();
 		List<string> wordList = new List<string>();
-		List<string> wordCollectionList = new List<string>(new[] {
-				"Apple", "Ant", "Axe",
-				"Ball", "Boy", "Book",
-				"Cat", "Clock", "Car",
-				"Dog", "Doll", "Door",
-				"Elephant", "Egg", "Eye",
-				"Fox", "Fan", "Fish",
-				"Grapes", "Goat", "Girl",
-				"Hen", "Horse", "Hat",
-				"Ice cream", "Ink", "Island",
-				"Joker", "Jug", "Jacket",
-				"Kite", "Key", "King",
-				"Lion", "Lotus", "Leg",
-				"Mango", "Milk", "Monkey",
-				"Nest", "Net", "Nose",
-				"Orange", "Owl", "Onion",
-				"Pen", "Parrot", "Panda",
-				"Queen", "Question", "Quiet",
-				"Rose", "Rabbit", "Ring",
-				"Snake", "Sun", "Spoon",
-				"Toys", "Table", "Tiger",
-				"Umbrella", "Uniform", "Umpire",
-				"Van", "Vegetables", "Volcano",
-				"Watermelon", "Water", "Whale",
-				"X-Mas Tree", "Xylophone", "X-Ray",
-				"Yellow", "Yak", "Yoga",
-				"Zebra", "Zero", "Zoo"
-		});
 
 		void Start() {
 			DisplayAlphabets();
@@ -91,7 +64,7 @@ namespace Tapas.AbcMatching
 				int r1 = (StringToInt(s, 0) - 65) * 3;
 				int r2 = (3 + r1);
 				int random = Random.Range(r1, r2);
-				wordList.Add(wordCollectionList[random]);
+				wordList.Add(Data.wordCollectionList[random]);
 			}
 		}
 		// GetComponent<TMP_Text>().text = randomLetter.ToString().ToUpper();
