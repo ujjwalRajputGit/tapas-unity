@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using Tapas.Common;
 using System;
+using Tapas.Common.Constants;
 using Random = UnityEngine.Random;
 
 namespace Tapas.CountTheFigures

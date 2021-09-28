@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using Tapas.Common;
+using Tapas.Common.Constants;
 
 namespace Tapas.BubbleBurst
 {
