@@ -179,9 +179,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 750
-        width: 250
-        height: 250
+        y: 650
+        width: 325
+        height: 325
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,10 +199,10 @@ TextureImporter:
       name: KidsPuzzle_1
       rect:
         serializedVersion: 2
-        x: 250
-        y: 750
-        width: 250
-        height: 250
+        x: 325
+        y: 650
+        width: 325
+        height: 325
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,10 +220,10 @@ TextureImporter:
       name: KidsPuzzle_2
       rect:
         serializedVersion: 2
-        x: 500
-        y: 750
-        width: 250
-        height: 250
+        x: 650
+        y: 650
+        width: 325
+        height: 325
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,10 +241,10 @@ TextureImporter:
       name: KidsPuzzle_3
       rect:
         serializedVersion: 2
-        x: 750
-        y: 750
-        width: 250
-        height: 250
+        x: 0
+        y: 325
+        width: 325
+        height: 325
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,10 +262,10 @@ TextureImporter:
       name: KidsPuzzle_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 500
-        width: 250
-        height: 250
+        x: 325
+        y: 325
+        width: 325
+        height: 325
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,10 +283,10 @@ TextureImporter:
       name: KidsPuzzle_5
       rect:
         serializedVersion: 2
-        x: 250
-        y: 500
-        width: 250
-        height: 250
+        x: 650
+        y: 325
+        width: 325
+        height: 325
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,10 +304,10 @@ TextureImporter:
       name: KidsPuzzle_6
       rect:
         serializedVersion: 2
-        x: 500
-        y: 500
-        width: 250
-        height: 250
+        x: 0
+        y: 0
+        width: 325
+        height: 325
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,10 +325,10 @@ TextureImporter:
       name: KidsPuzzle_7
       rect:
         serializedVersion: 2
-        x: 750
-        y: 500
-        width: 250
-        height: 250
+        x: 325
+        y: 0
+        width: 325
+        height: 325
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -346,10 +346,10 @@ TextureImporter:
       name: KidsPuzzle_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 250
-        width: 250
-        height: 250
+        x: 650
+        y: 0
+        width: 325
+        height: 325
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,153 +359,6 @@ TextureImporter:
       bones: []
       spriteID: e7c24dc0c11edec10800000000000000
       internalID: 2084569713132973182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KidsPuzzle_9
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 250
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c76ae0caa0820b20800000000000000
-      internalID: 3099180964453705666
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KidsPuzzle_10
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 250
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07f9b34ba71c5dc70800000000000000
-      internalID: 8995308563496410992
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KidsPuzzle_11
-      rect:
-        serializedVersion: 2
-        x: 750
-        y: 250
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21298537c6ac316b0800000000000000
-      internalID: -5326691367108701678
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KidsPuzzle_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6e33341b38ea5550800000000000000
-      internalID: 6150483581567450730
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KidsPuzzle_13
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 0
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26f6a27377e724510800000000000000
-      internalID: 1531925873751125858
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KidsPuzzle_14
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 0
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24c0b8cc66938c580800000000000000
-      internalID: -8806725957641892798
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KidsPuzzle_15
-      rect:
-        serializedVersion: 2
-        x: 750
-        y: 0
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8da1440737d582f90800000000000000
-      internalID: -6978224872224449832
       vertices: []
       indices: 
       edges: []
