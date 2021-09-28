@@ -19,6 +19,7 @@ namespace Tapas.CountTheFigures
     [SerializeField] List<TMP_Text> OptionsTexts;
     [SerializeField] string figureName;
     List<int> numberList = new List<int>();
+    public string correctAnswer;
     
     private void Start()
     {
@@ -41,6 +42,7 @@ namespace Tapas.CountTheFigures
         }
       }
       CountSimilarNumberGenerator(index);
+      correctAnswer = index.ToString();
     }
 
     private void DisplayCountText()
@@ -48,6 +50,10 @@ namespace Tapas.CountTheFigures
       int random = Random.Range(0, 78);
       figureName = Data.wordCollectionList[random];
       CountText.text = "Count The " + figureName + "s";
+      if(random == 18 || random == 34 || random == 57 || random == 64)
+      {
+        CountText.text = "Count The " + figureName;
+      }
     }
     private void DisplayOptionstext()
     {
