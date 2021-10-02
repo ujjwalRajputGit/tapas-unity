@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
-namespace Tapas.Common
+namespace Tapas.Common.Constants
 {
   public static class Data
   {
