@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using Tapas.Common;
+using UnityEngine.SceneManagement;
 using Tapas.Common.Constants;
 
 namespace Tapas.BubbleBurst
@@ -62,5 +63,9 @@ namespace Tapas.BubbleBurst
 			int i = s[index];
 			return i;
 		}
+		public void OnBackButtonClick()
+        {
+            SceneManager.LoadScene ("AlphabetsGamesScreen");
+        }		
 	}
 }

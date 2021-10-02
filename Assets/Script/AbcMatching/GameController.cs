@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.U2D;
 using UnityEngine.UI;
 using Tapas.Common;
+using UnityEngine.SceneManagement;
 using Tapas.Common.Constants;
 using Random = UnityEngine.Random;
 
@@ -152,6 +153,11 @@ namespace Tapas.AbcMatching
 			DrawLine();
 		}
 
+		public void OnBackButtonClick()
+        {
+            SceneManager.LoadScene ("AlphabetsGamesScreen");
+        }		
+
 		void OnAnswerSelected(List<string> selectedAnsList) {
 			updateLine = false;
 			if (selectedAnsList.Count > 2) {
@@ -186,5 +192,6 @@ namespace Tapas.AbcMatching
 		void OnDisable() {
 			LineMatch.matchAnswer -= OnAnswerSelected;
 		}
+
 	}
 }
