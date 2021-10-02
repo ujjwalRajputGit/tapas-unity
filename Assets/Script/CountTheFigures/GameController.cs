@@ -7,6 +7,7 @@ using TMPro;
 using Tapas.Common;
 using System;
 using Random = UnityEngine.Random;
+using UnityEngine.SceneManagement;
 
 namespace Tapas.CountTheFigures
 {
@@ -84,6 +85,9 @@ namespace Tapas.CountTheFigures
       }
       return num;
     }
-
+    public void OnBackButtonClick()
+        {
+            SceneManager.LoadScene ("MathematicsGamesScreen");
+        }		
   }
 }

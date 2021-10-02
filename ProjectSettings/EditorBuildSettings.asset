@@ -4,5 +4,38 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HomeScreen/MainMenu.unity
+    guid: cfd7fd9bc8bdf5d4d84287567efd4a5a
+  - enabled: 1
+    path: Assets/Scenes/AlphabetsGame/PickTheSmallLetter.unity
+    guid: 56f19f76478f6414fac7976f9a322d67
+  - enabled: 1
+    path: Assets/Scenes/AlphabetsGame/AbcMatching.unity
+    guid: ffb53dac3c6a43d418240837ef882904
+  - enabled: 1
+    path: Assets/Scenes/AlphabetsGame/AlphabetsGamesScreen.unity
+    guid: 3ed4b134b40fc7542b81ada747046829
+  - enabled: 1
+    path: Assets/Scenes/AlphabetsGame/BubbleBurst.unity
+    guid: 087ab00857a325c4584853eb09847259
+  - enabled: 1
+    path: Assets/Scenes/FunActivitiesGame/Puzzle.unity
+    guid: 35c076d7bb5891b488d04298cacf5131
+  - enabled: 1
+    path: Assets/Scenes/MathematicsGame/MathematicsGamesScreen.unity
+    guid: 345e0ebb60f63c743b0968c89d583398
+  - enabled: 1
+    path: Assets/Scenes/MathematicsGame/BalloonPop.unity
+    guid: 19d7b055a89cb2644a90e9510f524c7f
+  - enabled: 1
+    path: Assets/Scenes/MathematicsGame/CountTheFigures.unity
+    guid: abfc5822f7f5d494881caf31c8554921
+  - enabled: 1
+    path: Assets/Scenes/FunActivitiesGame/FixTheFaces.unity
+    guid: d7b6fadd9dbbd4049a05618e26635c52
+  - enabled: 1
+    path: Assets/Scenes/FunActivitiesGame/FunActivitiesGamesScreen.unity
+    guid: d5dd9f1f11a4c744ab515c6cf9cd782c
   m_configObjects: {}

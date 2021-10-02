@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace Tapas.BalloonPop
 {
@@ -18,7 +19,7 @@ namespace Tapas.BalloonPop
         }
         void DisplayNumber(){
             randomNumber = randomNumberGenerator().ToString();
-            NumberText.text = randomNumber; 
+            NumberText.text = "Touch The Number " + randomNumber; 
         }
         int randomNumberGenerator(){
             int randomNum = Random.Range(0, 10);
@@ -39,6 +40,10 @@ namespace Tapas.BalloonPop
             numberList.Add(Random.Range(0,10).ToString());
             numberList.Add(Random.Range(0,10).ToString());
         }
+        public void OnBackButtonClick()
+        {
+            SceneManager.LoadScene ("MathematicsGamesScreen");
+        }		
     }
 }
     

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.U2D;
 using UnityEngine.UI;
 using Tapas.Common;
+using UnityEngine.SceneManagement;
 
 namespace Tapas.AbcMatching
 {
@@ -114,5 +115,9 @@ namespace Tapas.AbcMatching
 		private void Update() {
 			DrawLine();
 		}
+		public void OnBackButtonClick()
+        {
+            SceneManager.LoadScene ("AlphabetsGamesScreen");
+        }		
 	}
 }
