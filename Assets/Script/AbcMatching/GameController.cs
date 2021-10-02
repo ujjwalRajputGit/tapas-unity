@@ -7,11 +7,12 @@ using UnityEngine.UI;
 using Tapas.Common;
 using UnityEngine.SceneManagement;
 using Tapas.Common.Constants;
+using Tapas.Interface;
 using Random = UnityEngine.Random;
 
 namespace Tapas.AbcMatching
 {
-	public class GameController : MonoBehaviour
+	public class GameController : MonoBehaviour, IGameController
 	{
 		[SerializeField] List<TMP_Text> alphabetTexts;
 		[SerializeField] List<TMP_Text> wordTexts;
@@ -29,10 +30,17 @@ namespace Tapas.AbcMatching
 		bool updateLine;
 		List<GameObject> lineRendererList = new List<GameObject>();
 		int rightAnswerCount;
+		ResultScreen resultScreen;
 
 		void Awake() {
 			mainCamera = Camera.main;
 			lineMaterial = Resources.LoadAll<Material>("Materials");
+
+			// generating result screen
+			var resultScreenPrefab = Resources.Load<GameObject>("Prefabs/ResultScreen");
+			var resultScreenObj = Instantiate(resultScreenPrefab);
+			resultScreenObj.transform.SetParent(FindObjectOfType<Canvas>().transform, false);
+			resultScreen = resultScreenObj.GetComponent<ResultScreen>();
 		}
 		void Start() {
 			StartGame();
@@ -153,10 +161,9 @@ namespace Tapas.AbcMatching
 			DrawLine();
 		}
 
-		public void OnBackButtonClick()
-        {
-            SceneManager.LoadScene ("AlphabetsGamesScreen");
-        }		
+		public void OnBackButtonClick() {
+			SceneManager.LoadScene("AlphabetsGamesScreen");
+		}
 
 		void OnAnswerSelected(List<string> selectedAnsList) {
 			updateLine = false;
@@ -179,13 +186,14 @@ namespace Tapas.AbcMatching
 		void OnWrongAnswer() {
 			lineRenderer.material = lineMaterial[2];
 			Debug.Log("wrong answer! ");
+			resultScreen.StartResultScreen(Result.WRONGANSWER, this);
 		}
 		void OnRightAnswer() {
 			lineRenderer.material = lineMaterial[1];
 			Debug.Log("you match the right answer ");
 			rightAnswerCount++;
 			if (rightAnswerCount >= alphabetTexts.Count) {
-				StartGame();
+				resultScreen.StartResultScreen(Result.RIGHTANSWER, this);
 			}
 		}
 
@@ -193,5 +201,8 @@ namespace Tapas.AbcMatching
 			LineMatch.matchAnswer -= OnAnswerSelected;
 		}
 
+		public void PlayAgain() {
+			StartGame();
+		}
 	}
 }
